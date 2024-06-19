@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Registration Form" />
+    <meta name="author" content="Colorlib" />
+    <meta name="keywords" content="Registration Form" />
+
+    <!-- Title Page-->
+    <title>Survey form</title>
+
+    <!-- Icons font CSS-->
+    <link
+      href="./src/vendor/mdi-font/css/material-design-iconic-font.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="./src/vendor/font-awesome-4.7/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link
+      href="./src/vendor/select2/select2.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="./src/vendor/datepicker/daterangepicker.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <!-- Main CSS-->
+    <link href="./src/style/style-survey.css" rel="stylesheet" media="all" />
+
+    <link rel="icon" href="./assets/img/icon-survey-top.png" type="image/png" />
+  </head>
+
+  <body>
+    <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+      <div class="wrapper wrapper--w960">
+        <div class="card card-2">
+          <div class="card-heading"></div>
+          <div class="card-body">
+            <h2 class="title">Survey Genre Favorite</h2>
+            <form
+              id="musicAnimeForm"
+              method="POST"
+              onsubmit="submitForm(event)"
+            >
+              <div class="input-group">
+                <input
+                  class="input--style-2"
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  id="name"
+                  required
+                />
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <input
+                      class="input--style-2 js-datepicker"
+                      type="text"
+                      placeholder="Birthdate"
+                      name="birthday"
+                      id="birthday"
+                      required
+                    />
+                    <i
+                      class="zmdi zmdi-calendar-note input-icon js-btn-calendar"
+                    ></i>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <div class="rs-select2 js-select-simple select--no-search">
+                      <select name="gender" id="gender" required>
+                        <option disabled="disabled" selected="selected">
+                          Gender
+                        </option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Bird</option>
+                        <option>Attack helicopter</option>
+                      </select>
+                      <div class="select-dropdown"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group">
+                <div class="id-form__label">Favorite Genre</div>
+                <div class="id-form__input" style="margin-top: 10px">
+                  <input
+                    type="radio"
+                    id="rock"
+                    name="genre"
+                    value="Rock"
+                    required
+                  />
+                  <label for="rock">Rock</label>
+                  <input
+                    type="radio"
+                    id="pop"
+                    name="genre"
+                    value="Pop"
+                    required
+                  />
+                  <label for="pop">Pop</label>
+                  <input
+                    type="radio"
+                    id="indie"
+                    name="genre"
+                    value="Indie"
+                    required
+                  />
+                  <label for="indie">Indie</label>
+                  <input
+                    type="radio"
+                    id="reggae"
+                    name="genre"
+                    value="Reggae"
+                    required
+                  />
+                  <label for="reggae">Reggae</label>
+                  <input
+                    type="radio"
+                    id="edm"
+                    name="genre"
+                    value="EDM"
+                    required
+                  />
+                  <label for="edm">EDM</label>
+                  <input
+                    type="radio"
+                    id="funkot"
+                    name="genre"
+                    value="Funkot"
+                    required
+                  />
+                  <label for="funkot">Funkot</label>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <input
+                      class="input--style-2"
+                      type="text"
+                      placeholder="Registration Code"
+                      name="res_code"
+                      id="res_code"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="p-t-30">
+                <button class="btn btn--radius btn--green" type="submit">
+                  Submit
+                </button>
+                <a
+                  class="btn btn--radius btn--green"
+                  style="margin-left: 20px"
+                  href="./index.html"
+                >
+                  Back to home
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="./src/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="./src/vendor/select2/select2.min.js"></script>
+    <script src="./src/vendor/datepicker/moment.min.js"></script>
+    <script src="./src/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Main JS-->
+    <script src="./src/script/script-survey.js"></script>
+  </body>
+</html>
